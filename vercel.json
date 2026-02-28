@@ -1,5 +1,6 @@
 {
   "version": 2,
+  "outputDirectory": "nft-frontend",
   "builds": [
     {
       "src": "nft-frontend/index.html",
@@ -8,7 +9,7 @@
   ],
   "routes": [
     {
-      "src": "/(.*)",
+      "src": "/",
       "dest": "nft-frontend/index.html"
     }
   ]
