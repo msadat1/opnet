@@ -1,0 +1,50 @@
+{
+    "name": "my-nft-collection",
+    "version": "1.0.0",
+    "author": {
+        "name": "your-name",
+        "email": "your@email.com"
+    },
+    "opnetVersion": "^1.0.0",
+    "main": "build/MyNFTCollection.wasm",
+    "target": "wasm",
+    "type": "contract",
+    "pluginType": "standalone",
+    "permissions": {
+        "database": {
+            "enabled": false,
+            "collections": []
+        },
+        "blocks": {
+            "preProcess": false,
+            "postProcess": false,
+            "onChange": false
+        },
+        "epochs": {
+            "onChange": false,
+            "onFinalized": false
+        },
+        "mempool": {
+            "txFeed": false
+        },
+        "api": {
+            "addEndpoints": false,
+            "addWebsocket": false
+        },
+        "filesystem": {
+            "configDir": false,
+            "tempDir": false
+        }
+    },
+    "resources": {
+        "maxMemoryMB": 256,
+        "maxCpuPercent": 25,
+        "maxStorageMB": 100
+    },
+    "lifecycle": {
+        "autoStart": true,
+        "restartOnCrash": true,
+        "maxRestarts": 3
+    },
+    "entryPoint": "assembly/index.ts"
+}
