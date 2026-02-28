@@ -1,3 +1,15 @@
 {
-  "rootDirectory": "nft-frontend"
+  "version": 2,
+  "builds": [
+    {
+      "src": "nft-frontend/index.html",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "nft-frontend/index.html"
+    }
+  ]
 }
